@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Navbar() {
     return (
         <header className="flex bg-slate-900 text-white h-14 items-center justify-between sticky top-0">
@@ -5,7 +7,11 @@ export default function Navbar() {
             <nav className="">
                 <ul className="flex gap-6 font-semibold">
                     <li className="cursor-pointer hover:text-fuchsia-500">Projects</li>
-                    <li className="cursor-pointer hover:text-fuchsia-500">About</li>
+                    <li className="cursor-pointer hover:text-fuchsia-500">
+                        <Link href='/about' >
+                            About
+                        </Link>
+                    </li>
                     <li className="bg-fuchsia-900 w-20 text-center h-7 rounded-full cursor-pointer hover:bg-fuchsia-700">Contact</li>
                 </ul>
             </nav>

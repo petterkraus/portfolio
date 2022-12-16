@@ -1,10 +1,11 @@
+import React from 'react';
 import Image from 'next/image'
 import Profile from '../assets/profile.png'
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
 export default function Home() {
     return (
-        <div className="bg-slate-200 h-[calc(100vh-86px)] grid grid-cols-2 items-center max-md:flex max-md:flex-col max-md:justify-center max-md:gap-9">
+        <div className="bg-slate-200 h-[calc(100vh-86px)] fill grid grid-cols-2 items-center max-md:flex max-md:flex-col max-md:justify-center max-md:gap-9">
             <div className='flex w-1/2 items-center mx-auto max-md:w-full max-md:px-10'>
                 <aside className='pr-8'>
                     <ul className='text-4xl flex flex-col gap-7 text-fuchsia-700'>
@@ -38,7 +39,7 @@ export default function Home() {
                     src={Profile}
                     width={600}
                     height={600}
-                    alt='Logo do NextJS'
+                    alt='Minha foto!'
 
                 />
             </div>
