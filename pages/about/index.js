@@ -11,9 +11,9 @@ export default function About() {
             <div className='flex justify-center'>
                 <h1 className="text-5xl font-poppins font-bold"> About me</h1>
             </div>
-            <div className='flex justify-center pt-8 gap-12 items-center max-md:flex-col px-7 h-full'>
+            <div className='flex justify-center pt-8 gap-12 items-center max-md:flex-col px-7 h-full text-center'>
                 <Image src={AboutMe} alt='Eu de novo' className='rounded-xl' />
-                <div className='text-xl w-1/2'>
+                <div className='text-xl w-1/2 max-md:w-full'>
                     <p >
                         I'm from south Brazil, Porto Alegre city. I'm 35 years old, and I have 4 cats!
                         I felt in love with front-end development, but my back-end skills are always evolving.
@@ -22,8 +22,8 @@ export default function About() {
                     <p>
                         My main tools are:
                     </p>
-                    <div className="pt-4">
-                        <ul className='text-4xl flex gap-4 text-fuchsia-700'>
+                    <div className="pt-4 ">
+                        <ul className='text-4xl flex gap-4 text-fuchsia-700 justify-center'>
                             <li>
                                 <FaReact />
 
