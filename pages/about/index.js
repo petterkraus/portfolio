@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export default function About() {
     return (
-        <div className="bg-slate-200 min-h-screen pt-10 mb-8">
+        <div className="bg-slate-200 min-h-screen pt-10">
             <div className='flex justify-center'>
                 <h1 className="text-5xl font-poppins font-bold"> About me</h1>
             </div>
