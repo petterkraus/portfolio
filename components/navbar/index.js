@@ -31,7 +31,9 @@ export default function Navbar() {
                         </Link>
                     </li>
                     <li className="bg-fuchsia-900 w-20 text-center h-7 rounded-full cursor-pointer hover:bg-fuchsia-700">
-                        Contact
+                        <Link href='/contact' >
+                            Contact
+                        </Link>
                     </li>
                 </ul>
             </nav>
@@ -49,11 +51,12 @@ export default function Navbar() {
                 >
                     &times;
                 </button>
-                <nav className='flex flex-col min-h-full self-center items-center py-8 gap-8'
+                <nav className='flex flex-col min-h-full self-center items-center py-8 gap-8 text-4xl'
                     onClick={toggleMenu}
                 >
                     <Link href='/'>Home</Link>
                     <Link href='/about'>About</Link>
+                    <Link href='/projects' > Projects </Link>
                     <Link href='/contact'>Contact</Link>
 
                 </nav>
