@@ -22,8 +22,7 @@ export default function Contact() {
 
         try {
 
-            await axios.post("/send-email", form);
-
+            // await axios.post("/send-email", form);
 
             toast.update(loading, {
                 render: "Email sent successfully!",
@@ -35,7 +34,7 @@ export default function Contact() {
                 autoClose: 2000,
             });
 
-            setForm({ name: '', email: '', message: '' });
+            clearFields();
 
             setSending(false);
         } catch (error) {
@@ -60,6 +59,14 @@ export default function Contact() {
         setForm((prevState) => ({ ...prevState, [name]: value }));
     }
 
+
+    function clearFields() {
+        console.log("ok");
+        setForm((prevState) => ({ ...prevState, name: '', email: '', message: '' }));
+    }
+
+
+
     return (
         <div className="bg-slate-200 min-h-[calc(100vh-86px)] pt-10 flex justify-center">
             <div className="bg-white w-[40rem] py-10 h-fit">
@@ -74,6 +81,7 @@ export default function Contact() {
                         name="name"
                         type="text"
                         placeholder="Name"
+                        value={form.name}
                         onChange={(e) => handleFields(e)}
                     />
                     <Input
@@ -81,6 +89,7 @@ export default function Contact() {
                         name="email"
                         type="email"
                         placeholder="your@email.com"
+                        value={form.email}
                         onChange={(e) => handleFields(e)}
                     />
                     <textarea
@@ -88,6 +97,7 @@ export default function Contact() {
                         name="message"
                         type="text"
                         placeholder="Message"
+                        value={form.message}
                         className="border border-gray-300 h-64 p-2 rounded-md w-full focus:outline-2 focus:outline-purple-700 "
                         onChange={(e) => handleFields(e)}
                     />
