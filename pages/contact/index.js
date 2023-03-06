@@ -7,29 +7,51 @@ import Input from './../../components/Input/index';
 
 
 export default function Contact() {
-    const [form, setForm] = useState({ name: '', email: '', message: '' })
+    const [form, setForm] = useState({ name: '', email: '', message: '' });
+    const [sending, setSending] = useState(false);
 
     async function handleSubmit(e) {
         e.preventDefault();
 
+        setSending(true);
+        const loading = toast.loading("Trying to send the message...", {
+            position: "top-center",
+            draggable: false,
+            theme: "colored"
+        });
+
         try {
+
             await axios.post("/send-email", form);
 
-            toast.success("Email sent successfully!", {
+
+            toast.update(loading, {
+                render: "Email sent successfully!",
+                type: "success",
+                isLoading: false,
                 position: "top-center",
                 draggable: false,
                 theme: "colored",
-            })
+                autoClose: 2000,
+            });
 
+            setForm({ name: '', email: '', message: '' });
+
+            setSending(false);
         } catch (error) {
             console.error(error);
 
-            toast.error("An error occurred while sending the email.", {
+            setSending(true);
+
+            toast.update(loading, {
+                render: "Something went wrong, try again please",
+                type: "error",
+                isLoading: false,
                 position: "top-center",
                 draggable: false,
                 theme: "colored",
-            })
-
+                autoClose: 2000,
+            });
         }
     }
 
@@ -70,7 +92,10 @@ export default function Contact() {
                         onChange={(e) => handleFields(e)}
                     />
 
-                    <button type="submit" className="font-poppins w-32 h-11 bg-fuchsia-800 hover:bg-fuchsia-600 text-xl text-white rounded-xl">
+                    <button
+                        disabled={sending}
+                        type="submit"
+                        className="font-poppins w-32 h-11 bg-fuchsia-800 hover:bg-fuchsia-600 text-xl text-white rounded-xl">
                         Send
                     </button>
                 </form>
