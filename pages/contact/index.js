@@ -13,7 +13,7 @@ export default function Contact() {
         e.preventDefault();
 
         try {
-            // await axios.post("/send-email", form);
+            await axios.post("/send-email", form);
 
             toast.success("Email sent successfully!", {
                 position: "top-center",
@@ -66,7 +66,7 @@ export default function Contact() {
                         name="message"
                         type="text"
                         placeholder="Message"
-                        className="border border-gray-300 h-64 p-2 rounded-md w-full"
+                        className="border border-gray-300 h-64 p-2 rounded-md w-full focus:outline-2 focus:outline-purple-700 "
                         onChange={(e) => handleFields(e)}
                     />
 

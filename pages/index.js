@@ -17,17 +17,17 @@ export default function Home() {
 
           <ul className="text-4xl w-full flex gap-7 text-fuchsia-700 py-6">
             <li className="cursor-pointer">
-              <a href="https://www.linkedin.com/in/petterkg/">
+              <a href="https://www.linkedin.com/in/petterkg/" target="_blank">
                 <FaLinkedin />
               </a>
             </li>
             <li className="cursor-pointer">
-              <a href="https://github.com/petterkraus">
+              <a href="https://github.com/petterkraus" target="_blank">
                 <FaGithubSquare />
               </a>
             </li>
             <li className="cursor-pointer">
-              <a href="https://instagram.com/petterkraus">
+              <a href="https://instagram.com/petterkraus" target="_blank">
                 <FaInstagramSquare />
               </a>
             </li>

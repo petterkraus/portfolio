@@ -45,7 +45,7 @@ export default function Input({
             id={label}
             className={` ${
               size ? size : "w-full"
-            } bg-white py-2 px-3 border rounded-lg placeholder:font-nuni focus:outline-none focus:outline-purple-700 focus:outline-2  focus:border-transparent border-gray-400 ${
+            } bg-white py-2 px-3 border rounded-lg placeholder:font-nuni  focus:outline-purple-700 focus:outline-2  focus:border-transparent border-gray-400 ${
               error ? "border-red-600" : null
             } ${shadow ? "drop-shadow-lg" : null}`}
             type={type ? type : "text"}
@@ -58,7 +58,7 @@ export default function Input({
               id={label}
               className={`${
                 !size ? "w-full" : size
-              } bg-white py-2 px-3 border rounded-lg placeholder:font-nuni focus:outline-none focus:outline-purple-700 focus:outline-2 focus:border-transparent border-gray-400 ${
+              } bg-white py-2 px-3 border rounded-lg placeholder:font-nuni  focus:outline-purple-700 focus:outline-2 focus:border-transparent border-gray-400 ${
                 error ? "border-red-600" : null
               } ${shadow ? "drop-shadow-lg" : null} `}
               type={showPassword ? "text" : "password"}
@@ -79,7 +79,7 @@ export default function Input({
               id={label}
               className={`${
                 !size ? "w-full" : size
-              }  bg-white py-2 px-3 border rounded-lg placeholder:font-nuni focus:outline-none focus:outline-purple-700 focus:outline-2 focus:border-transparent border-gray-400 ${
+              }  bg-white py-2 px-3 border rounded-lg placeholder:font-nuni  focus:outline-purple-700 focus:outline-2 focus:border-transparent border-gray-400 ${
                 error ? "border-red-600" : null
               } ${shadow ? "drop-shadow-lg" : null} `}
               type={"search"}
