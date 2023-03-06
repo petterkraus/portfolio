@@ -22,7 +22,7 @@ export default function Contact() {
 
         try {
 
-            // await axios.post("/send-email", form);
+            await axios.post("/send-email", form);
 
             toast.update(loading, {
                 render: "Email sent successfully!",
@@ -61,7 +61,6 @@ export default function Contact() {
 
 
     function clearFields() {
-        console.log("ok");
         setForm((prevState) => ({ ...prevState, name: '', email: '', message: '' }));
     }
 
@@ -98,7 +97,7 @@ export default function Contact() {
                         type="text"
                         placeholder="Message"
                         value={form.message}
-                        className="border border-gray-300 h-64 p-2 rounded-md w-full focus:outline-2 focus:outline-purple-700 "
+                        className="border border-gray-300 h-64 p-2 rounded-md w-full focus:outline-2 focus:outline-purple-700 max-md:h-40 "
                         onChange={(e) => handleFields(e)}
                     />
 

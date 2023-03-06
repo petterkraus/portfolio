@@ -11,7 +11,7 @@ export default function About() {
             <div className='flex justify-center'>
                 <h1 className="text-5xl font-poppins font-bold"> About me</h1>
             </div>
-            <div className='flex justify-center pt-8 gap-12 items-center max-md:flex-col px-7 h-full text-center'>
+            <div className='flex justify-center pt-8 gap-12 items-center max-md:flex-col px-7 h-full pb-24 text-center'>
                 <Image src={AboutMe} alt='Eu de novo' className='rounded-xl' />
                 <div className='text-xl w-1/2 max-md:w-full'>
                     <p >

@@ -11,7 +11,7 @@ export default function Navbar() {
     }
 
     return (
-        <header className="flex bg-slate-900 text-white h-14 items-center justify-between sticky top-0">
+        <header className="flex bg-slate-900 text-white h-14 items-center justify-between sticky top-0 z-50">
             <h3 className="font-poppins text-2xl font-bold px-6 max-md:text-2xl hover:text-fuchsia-700">
                 <Link href='/' className='flex items-center gap-3'>
                     Petter Kraus <HiCodeBracket className='text-3xl' />

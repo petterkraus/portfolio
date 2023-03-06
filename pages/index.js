@@ -15,7 +15,7 @@ export default function Home() {
             FullStack developer
           </p>
 
-          <ul className="text-4xl w-full flex gap-7 text-fuchsia-700 py-6">
+          <ul className="text-4xl w-full flex gap-7 text-fuchsia-700 py-6 max-md:gap-0 max-md:justify-around">
             <li className="cursor-pointer">
               <a href="https://www.linkedin.com/in/petterkg/" target="_blank">
                 <FaLinkedin />
